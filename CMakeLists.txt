@@ -174,4 +174,7 @@ if (WIN32)
 	add_custom_command(TARGET cs148opengl4 POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/external/freeimage/distrib/windows/${EX_PLATFORM_NAME}/FreeImage.dll" "$<TARGET_FILE_DIR:cs148opengl4>")
 	add_custom_command(TARGET cs148opengl4 POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/external/glew/distrib/windows/bin/${EX_PLATFORM_NAME}/glew32.dll" "$<TARGET_FILE_DIR:cs148opengl4>")
 	add_custom_command(TARGET cs148opengl4 POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/external/SDL2/windows/lib/${EX_PLATFORM_NAME}/SDL2.dll" "$<TARGET_FILE_DIR:cs148opengl4>")
+	add_custom_command(TARGET cs148opengl4 POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/external/msvcp110.dll" "$<TARGET_FILE_DIR:cs148opengl4>")
+	add_custom_command(TARGET cs148opengl4 POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_SOURCE_DIR}/external/msvcr110.dll" "$<TARGET_FILE_DIR:cs148opengl4>")
 endif()
+
